@@ -14,3 +14,9 @@ SamplesViewModel vm = new SamplesViewModel();
 // var result = vm.AnonymousClassQuery();
 // var result = vm.AnonymousClassMethod();
 // vm.Display(result);
+
+
+// List<Product> products = vm.OrderByQuery();
+List<Product> products = vm.OrderByMethod();
+
+vm.Display(products);
