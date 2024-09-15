@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Source\linq-fundamentals-csharp\LINQSamples.Common\LINQSamples.Common.csproj" />
       <ProjectReference Include="..\..\Source\linq-fundamentals-csharp\LINQSamples.DataLayer\LINQSamples.DataLayer.csproj" />
     </ItemGroup>
 
