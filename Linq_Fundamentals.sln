@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Select", "Select\Select.csproj", "{BF6D22C5-4A03-4DE3-9BFE-002662C7DCCD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandBox", "SandBox\SandBox.csproj", "{BF6D22C5-4A03-4DE3-9BFE-002662C7DCCD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQSamples.Common", "..\Source\linq-fundamentals-csharp\LINQSamples.Common\LINQSamples.Common.csproj", "{08C387F9-BFFA-4026-A1CD-8B3090C661BF}"
 EndProject

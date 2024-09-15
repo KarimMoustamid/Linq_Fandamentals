@@ -71,7 +71,7 @@ namespace LINQSamples
 
         #region GetSpecificColumnsQuery
         /// <summary>
-        /// Select a few specific properties from products and create new Product objects
+        /// Select a few specific pSandBoxies from products and create new Product objects
         /// </summary>
         public List<Product> GetSpecificColumnsQuery()
         {
@@ -86,7 +86,7 @@ namespace LINQSamples
                         Name = product.Name,
                         Size = product.Size
                     }
-                    ).ToList();
+                ).ToList();
 
             return list;
         }
@@ -94,7 +94,7 @@ namespace LINQSamples
 
         #region GetSpecificColumnsMethod
         /// <summary>
-        /// Select a few specific properties from products and create new Product objects
+        /// Select a few specifSandBoxperties from products and create new Product objects
         /// </summary>
         public List<Product> GetSpecificColumnsMethod()
         {
@@ -134,9 +134,9 @@ namespace LINQSamples
             // Loop through anonymous class
             foreach (var prod in list)
             {
-              sb.AppendLine($"Product ID: {prod.Identifier}");
-              sb.AppendLine($"   Product Name: {prod.ProductName}");
-              sb.AppendLine($"   Product Size: {prod.ProductSize}");
+                sb.AppendLine($"Product ID: {prod.Identifier}");
+                sb.AppendLine($"   Product Name: {prod.ProductName}");
+                sb.AppendLine($"   Product Size: {prod.ProductSize}");
             }
 
             return sb.ToString();
@@ -153,26 +153,139 @@ namespace LINQSamples
             StringBuilder sb = new(2048);
 
             // Write Method Syntax Here
-            var list = products.Select( product => new
-                {
-                    Identifier = product.ProductID,
-                    ProductName = product.Name,
-                    ProductSize = product.Size
-                });
+            var list = products.Select(product => new
+            {
+                Identifier = product.ProductID,
+                ProductName = product.Name,
+                ProductSize = product.Size
+            });
 
             // Loop through anonymous class
             foreach (var prod in list)
             {
-              sb.AppendLine($"Product ID: {prod.Identifier}");
-              sb.AppendLine($"   Product Name: {prod.ProductName}");
-              sb.AppendLine($"   Product Size: {prod.ProductSize}");
+                sb.AppendLine($"Product ID: {prod.Identifier}");
+                sb.AppendLine($"   Product Name: {prod.ProductName}");
+                sb.AppendLine($"   Product Size: {prod.ProductSize}");
             }
 
             return sb.ToString();
         }
         #endregion
+
+        // Note : The query syntax can express everything that's available in Linq !
+
+        #region OrderBy
+        #region OrderByQuery
+        /// <summary>
+        /// Order products by Name
+        /// </summary>
+        public List<Product> OrderByQuery()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list = new();
+
+            // Write Query Syntax Here
+
+
+            return list;
+        }
+        #endregion
+
+        #region OrderByMethod
+        /// <summary>
+        /// Order products by Name
+        /// </summary>
+        public List<Product> OrderByMethod()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list = new();
+
+            // Write Method Syntax Here
+
+
+            return list;
+        }
+        #endregion
+
+        #region OrderByDescendingQuery Method
+        /// <summary>
+        /// Order products by name in descending order
+        /// </summary>
+        public List<Product> OrderByDescendingQuery()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list = new();
+
+            // Write Query Syntax Here
+
+
+            return list;
+        }
+        #endregion
+
+        #region OrderByDescendingMethod Method
+        /// <summary>
+        /// Order products by name in descending order
+        /// </summary>
+        public List<Product> OrderByDescendingMethod()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list = new();
+
+            // Write Method Syntax Here
+
+
+            return list;
+        }
+        #endregion
+
+        #region OrderByTwoFieldsQuery Method
+        /// <summary>
+        /// Order products by Color descending, then Name
+        /// </summary>
+        public List<Product> OrderByTwoFieldsQuery()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list = new();
+
+            // Write Query Syntax Here
+
+
+            return list;
+        }
+        #endregion
+
+        #region OrderByTwoFieldsMethod Method
+        /// <summary>
+        /// Order products by Color descending, then Name
+        /// </summary>
+        public List<Product> OrderByTwoFieldsMethod()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list = new();
+
+            // Write Method Syntax Here
+
+
+            return list;
+        }
+        #endregion
+
+        #region OrderByTwoFieldsDescMethod Method
+        /// <summary>
+        /// Order products by Color descending, then Name Descending
+        /// </summary>
+        public List<Product> OrderByTwoFieldsDescMethod()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list = new();
+
+            // Write Method Syntax Here
+
+
+            return list;
+        }
+        #endregion
+        #endregion
     }
 }
-
-
-// Note : The query syntax can express everything that's available in Linq !

@@ -51,11 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/Select.csproj",
-      "projectName": "Select",
-      "projectPath": "/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/Select.csproj",
+      "projectUniqueName": "/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/SandBox/SandBox.csproj",
+      "projectName": "SandBox",
+      "projectPath": "/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/SandBox/SandBox.csproj",
       "packagesPath": "/Users/karimmoustamid/.nuget/packages/",
-      "outputPath": "/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/",
+      "outputPath": "/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/SandBox/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/karimmoustamid/.nuget/NuGet/NuGet.Config"
