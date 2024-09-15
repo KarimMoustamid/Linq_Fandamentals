@@ -150,3 +150,6 @@ namespace LINQSamples
     #endregion
   }
 }
+
+
+// Note : The query syntax can express everything that's available in Linq !
