@@ -1,0 +1,15 @@
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/bin/Debug/net8.0/Select
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/bin/Debug/net8.0/Select.deps.json
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/bin/Debug/net8.0/Select.runtimeconfig.json
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/bin/Debug/net8.0/Select.dll
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/bin/Debug/net8.0/Select.pdb
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/Select.GeneratedMSBuildEditorConfig.editorconfig
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/Select.AssemblyInfoInputs.cache
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/Select.AssemblyInfo.cs
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/Select.csproj.CoreCompileInputs.cache
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/Select.sourcelink.json
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/Select.dll
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/refint/Select.dll
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/Select.pdb
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/Select.genruntimeconfig.cache
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/ref/Select.dll
