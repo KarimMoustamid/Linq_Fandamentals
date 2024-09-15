@@ -1,21 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using LINQSamples;
 SamplesViewModel vm = new SamplesViewModel();
-List<Product> products =  ProductRepository.GetAll();
 
+// List<Product> products = vm.GetAllQuery();
+List<Product> products = vm.GetAllMethod();
 
-decimal Min = decimal.MaxValue;
-
-// foreach (var product in products)
-// {
-//     if (product.Price < Min)
-//     {
-//         Min = product.Price;
-//     }
-// }
-//
-// Console.WriteLine($"Max Price: {Min}");
-
-
-decimal value = (from prod in products select prod.ListPrice).Min();
-Console.WriteLine($"Price: {value}");
+vm.Display(products);
