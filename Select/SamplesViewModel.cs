@@ -79,7 +79,14 @@ namespace LINQSamples
             List<Product> list = new();
 
             // Write Query Syntax Here
-
+            list = (from product in products
+                    select new Product
+                    {
+                        ProductID = product.ProductID,
+                        Name = product.Name,
+                        Size = product.Size
+                    }
+                    ).ToList();
 
             return list;
         }
@@ -95,7 +102,12 @@ namespace LINQSamples
             List<Product> list = new();
 
             // Write Method Syntax Here
-
+            list.Select(product => new Product
+            {
+                ProductID = product.ProductID,
+                Name = product.Name,
+                Size = product.Size
+            });
 
             return list;
         }
@@ -111,15 +123,21 @@ namespace LINQSamples
             StringBuilder sb = new(2048);
 
             // Write Query Syntax Here
-
+            var list = (from product in products
+                select new
+                {
+                    Identifier = product.ProductID,
+                    ProductName = product.Name,
+                    ProductSize = product.Size
+                });
 
             // Loop through anonymous class
-            //foreach (var prod in list)
-            //{
-            //  sb.AppendLine($"Product ID: {prod.Identifier}");
-            //  sb.AppendLine($"   Product Name: {prod.ProductName}");
-            //  sb.AppendLine($"   Product Size: {prod.ProductSize}");
-            //}
+            foreach (var prod in list)
+            {
+              sb.AppendLine($"Product ID: {prod.Identifier}");
+              sb.AppendLine($"   Product Name: {prod.ProductName}");
+              sb.AppendLine($"   Product Size: {prod.ProductSize}");
+            }
 
             return sb.ToString();
         }
@@ -135,15 +153,20 @@ namespace LINQSamples
             StringBuilder sb = new(2048);
 
             // Write Method Syntax Here
-
+            var list = products.Select( product => new
+                {
+                    Identifier = product.ProductID,
+                    ProductName = product.Name,
+                    ProductSize = product.Size
+                });
 
             // Loop through anonymous class
-            //foreach (var prod in list)
-            //{
-            //  sb.AppendLine($"Product ID: {prod.Identifier}");
-            //  sb.AppendLine($"   Product Name: {prod.ProductName}");
-            //  sb.AppendLine($"   Product Size: {prod.ProductSize}");
-            //}
+            foreach (var prod in list)
+            {
+              sb.AppendLine($"Product ID: {prod.Identifier}");
+              sb.AppendLine($"   Product Name: {prod.ProductName}");
+              sb.AppendLine($"   Product Size: {prod.ProductSize}");
+            }
 
             return sb.ToString();
         }
