@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "Select/1.0.0": {
+        "dependencies": {
+          "LINQSamples.DataLayer": "1.0.0"
+        },
         "runtime": {
           "Select.dll": {}
+        }
+      },
+      "LINQSamples.DataLayer/1.0.0": {
+        "runtime": {
+          "LINQSamples.DataLayer.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "Select/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LINQSamples.DataLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -13,3 +13,7 @@
 /Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/Select.pdb
 /Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/Select.genruntimeconfig.cache
 /Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/ref/Select.dll
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/bin/Debug/net8.0/LINQSamples.DataLayer.dll
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/bin/Debug/net8.0/LINQSamples.DataLayer.pdb
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/Select.csproj.AssemblyReference.cache
+/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Linq_Fundamentals/Select/obj/Debug/net8.0/Select.csproj.Up2Date

@@ -7,4 +7,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\Source\linq-fundamentals-csharp\LINQSamples.DataLayer\LINQSamples.DataLayer.csproj" />
+    </ItemGroup>
+
 </Project>
