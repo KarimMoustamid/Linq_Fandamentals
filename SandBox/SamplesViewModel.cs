@@ -4,6 +4,8 @@ namespace LINQSamples
 {
     public class SamplesViewModel : ViewModelBase
     {
+         // Note : The query syntax can express everything that's available in Linq !
+        #region Select
         #region GetAllQuery
         /// <summary>
         /// Put all products into a collection using LINQ
@@ -171,8 +173,7 @@ namespace LINQSamples
             return sb.ToString();
         }
         #endregion
-
-        // Note : The query syntax can express everything that's available in Linq !
+        #endregion
 
         #region OrderBy
         #region OrderByQuery
@@ -407,7 +408,6 @@ namespace LINQSamples
         #endregion
 
         #region Single
-
         #region FirstQuery
         /// <summary>
         /// Locate a specific product using First(). First() searches forward in the collection.
