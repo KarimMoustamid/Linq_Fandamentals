@@ -1132,6 +1132,8 @@ namespace LINQSamples
             bool value = false;
 
             // Write Method Syntax Here
+            value = (from prod in products select prod)
+                .Contains(new Product { ProductID = 744}, pc);
 
 
             return value;
