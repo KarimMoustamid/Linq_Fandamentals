@@ -30,13 +30,13 @@
   "libraries": {
     "LINQSamples.Common/1.0.0": {
       "type": "project",
-      "path": "../../Source/linq-fundamentals-csharp/LINQSamples.Common/LINQSamples.Common.csproj",
-      "msbuildProject": "../../Source/linq-fundamentals-csharp/LINQSamples.Common/LINQSamples.Common.csproj"
+      "path": "../../Source/Source/LINQSamples.Common/LINQSamples.Common.csproj",
+      "msbuildProject": "../../Source/Source/LINQSamples.Common/LINQSamples.Common.csproj"
     },
     "LINQSamples.DataLayer/1.0.0": {
       "type": "project",
-      "path": "../../Source/linq-fundamentals-csharp/LINQSamples.DataLayer/LINQSamples.DataLayer.csproj",
-      "msbuildProject": "../../Source/linq-fundamentals-csharp/LINQSamples.DataLayer/LINQSamples.DataLayer.csproj"
+      "path": "../../Source/Source/LINQSamples.DataLayer/LINQSamples.DataLayer.csproj",
+      "msbuildProject": "../../Source/Source/LINQSamples.DataLayer/LINQSamples.DataLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -75,6 +75,12 @@
             },
             "/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Source/linq-fundamentals-csharp/LINQSamples.DataLayer/LINQSamples.DataLayer.csproj": {
               "projectPath": "/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Source/linq-fundamentals-csharp/LINQSamples.DataLayer/LINQSamples.DataLayer.csproj"
+            },
+            "/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Source/Source/LINQSamples.Common/LINQSamples.Common.csproj": {
+              "projectPath": "/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Source/Source/LINQSamples.Common/LINQSamples.Common.csproj"
+            },
+            "/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Source/Source/LINQSamples.DataLayer/LINQSamples.DataLayer.csproj": {
+              "projectPath": "/Users/karimmoustamid/Desktop/Code/01-Study/C#/Link/Source/Source/LINQSamples.DataLayer/LINQSamples.DataLayer.csproj"
             }
           }
         }

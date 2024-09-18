@@ -3,31 +3,31 @@ using LINQSamples;
 
 // Create instance of view model
 SamplesViewModel vm = new();
-
-try
-{
-  // Call Sample Method
-  var result = vm.SingleOrDefaultQuery();
-
-  // Display Results
-  vm.Display(result);
-}
-catch (ArgumentNullException ex)
-{
-  // This collection was null
-  vm.Display(ex);
-}
-catch (InvalidOperationException ex)
-{
-  // First()/Last() methods = No item was found that matches the criteria
-  // Single*() methods = Multiple values were found
-  vm.Display(ex);
-}
-catch (Exception ex)
-{
-  // Catch-all exception
-  vm.Display(ex);
-}
+//
+// try
+// {
+//   // Call Sample Method
+//   var result = vm.FirstQuery();
+//
+//   // Display Results
+//   vm.Display(result);
+// }
+// catch (ArgumentNullException ex)
+// {
+//   // This collection was null
+//   vm.Display(ex);
+// }
+// catch (InvalidOperationException ex)
+// {
+//   // First()/Last() methods = No item was found that matches the criteria
+//   // Single*() methods = Multiple values were found
+//   vm.Display(ex);
+// }
+// catch (Exception ex)
+// {
+//   // Catch-all exception
+//   vm.Display(ex);
+// }
 
 // List<Product> products = vm.GetAllQuery();
 // List<Product> products = vm.GetAllMethod();
@@ -44,6 +44,10 @@ catch (Exception ex)
 
 
 // List<Product> products = vm.OrderByQuery();
-List<Product> products = vm.OrderByMethod();
+// List<Product> products = vm.OrderByMethod();
+//
+// vm.Display(products);
 
-vm.Display(products);
+
+var result = vm.ContainsQuery();
+vm.Display(result);

@@ -4,7 +4,8 @@ namespace LINQSamples
 {
     public class SamplesViewModel : ViewModelBase
     {
-         // Note : The query syntax can express everything that's available in Linq !
+        // Note : The query syntax can express everything that's available in Linq !
+
         #region Select
         #region GetAllQuery
         /// <summary>
@@ -421,6 +422,8 @@ namespace LINQSamples
             Product value = null;
 
             // Write Query Syntax Here
+            value = (from prod in products
+                select prod).First(p => p.Color == "Red");
 
             // Test the exception handling
 
@@ -441,6 +444,7 @@ namespace LINQSamples
             Product value = null;
 
             // Write Method Syntax Here
+            value = products.First(p => p.Color == "Red");
 
             return value;
         }
@@ -459,6 +463,7 @@ namespace LINQSamples
             Product value = null;
 
             // Write Query Syntax Here
+            value = (from p in products select p).FirstOrDefault(p => p.Color == "Red", new Product {ProductID = -1, Name = "NOT FOUND"});
 
             // Test the exception handling
 
@@ -479,7 +484,7 @@ namespace LINQSamples
             Product value = null;
 
             // Write Method Syntax Here
-
+            value = products.FirstOrDefault(p => p.Color == "Red");
             return value;
         }
         #endregion
@@ -605,6 +610,7 @@ namespace LINQSamples
             Product value = null;
 
             // Write Query Syntax Here
+            value = (from p in products select p).Single(p => p.ProductID == 706);
 
             // Test the exception handling for finding multiple values
 
@@ -626,6 +632,7 @@ namespace LINQSamples
             Product value = null;
 
             // Write Method Syntax Here
+            value = products.Single(p => p.ProductID == 706);
 
             return value;
         }
@@ -669,6 +676,460 @@ namespace LINQSamples
         {
             List<Product> products = GetProducts();
             Product value = null;
+
+            // Write Method Syntax Here
+
+
+            return value;
+        }
+        #endregion
+        #endregion
+
+        #region PartitionDistinct
+        #region TakeQuery
+        /// <summary>
+        /// Use Take() to select a specified number of items from the beginning of a collection
+        /// </summary>
+        public List<Product> TakeQuery()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list;
+
+            // Write Query Syntax Here
+            list = (from prod in products
+                orderby prod.Name
+                select prod).Take(5).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region TakeMethod
+        /// <summary>
+        /// Use Take() to select a specified number of items from the beginning of a collection
+        /// </summary>
+        public List<Product> TakeMethod()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list;
+
+            // Write Query Syntax Here
+            list = products.OrderBy(prod => prod.Name).Take(5).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region TakeRangeQuery
+        /// <summary>
+        /// Use Take() to select a specified number of items from a collection using the Range operator
+        /// </summary>
+        public List<Product> TakeRangeQuery()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list;
+
+            // Write Query Syntax Here
+            list = (from prod in products
+                orderby prod.Name
+                select prod).Take(5..8).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region TakeRangeMethod
+        /// <summary>
+        /// Use Take() to select a specified number of items from the beginning of a collection
+        /// </summary>
+        public List<Product> TakeRangeMethod()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list;
+
+            // Write Query Syntax Here
+            list = products.OrderBy(prod => prod.Name).Take(5..8).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region TakeWhileQuery
+        /// <summary>
+        /// Use TakeWhile() to select a specified number of items from the beginning of a collection based on a true condition
+        /// </summary>
+        public List<Product> TakeWhileQuery()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list;
+
+            // Write Query Syntax Here
+            list = (from prod in products
+                orderby prod.Name
+                select prod).TakeWhile(prod => prod.Name.StartsWith("A")).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region TakeWhileMethod
+        /// <summary>
+        /// Use TakeWhile() to select a specified number of items from the beginning of a collection based on a true condition
+        /// </summary>
+        public List<Product> TakeWhileMethod()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list;
+
+            // Write Method Syntax Here
+            list = products.OrderBy(prod => prod.Name)
+                .TakeWhile(prod => prod.Name.StartsWith("A")).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region SkipQuery
+        /// <summary>
+        /// Use Skip() to move past a specified number of items from the beginning of a collection
+        /// </summary>
+        public List<Product> SkipQuery()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list;
+
+            // Write Query Syntax Here
+            list = (from prod in products
+                orderby prod.Name
+                select prod).Skip(30).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region SkipMethod
+        /// <summary>
+        /// Use Skip() to move past a specified number of items from the beginning of a collection
+        /// </summary>
+        public List<Product> SkipMethod()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list;
+
+            // Write Method Syntax Here
+            list = products.OrderBy(prod => prod.Name).Skip(30).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region SkipWhileQuery
+        /// <summary>
+        /// Use SkipWhile() to move past a specified number of items from the beginning of a collection based on a true condition
+        /// </summary>
+        public List<Product> SkipWhileQuery()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list;
+
+            // Write Query Syntax Here
+            list = (from prod in products
+                orderby prod.Name
+                select prod).SkipWhile(prod => prod.Name.StartsWith("A")).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region SkipWhileMethod
+        /// <summary>
+        /// Use SkipWhile() to move past a specified number of items from the beginning of a collection based on a true condition
+        /// </summary>
+        public List<Product> SkipWhileMethod()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list;
+
+            // Write Method Syntax Here
+            list = products.OrderBy(prod => prod.Name)
+                .SkipWhile(prod => prod.Name.StartsWith("A")).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region DistinctQuery
+        /// <summary>
+        /// The Distinct() operator finds all unique values within a collection.
+        /// In this sample you put distinct product colors into another collection using LINQ
+        /// </summary>
+        public List<string> DistinctQuery()
+        {
+            List<Product> products = GetProducts();
+            List<string> list;
+
+            // Write Query Syntax Here
+            list = (from prod in products
+                    select prod.Color)
+                .Distinct().OrderBy(c => c).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region DistinctWhere
+        /// <summary>
+        /// The Distinct() operator finds all unique values within a collection.
+        /// In this sample you put distinct product colors into another collection using LINQ
+        /// </summary>
+        public List<string> DistinctWhere()
+        {
+            List<Product> products = GetProducts();
+            List<string> list;
+
+            // Write Method Syntax Here
+            list = products.Select(p => p.Color).Distinct().OrderBy(c => c).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region DistinctByQuery
+        /// <summary>
+        /// The DistinctBy() operator finds all unique values within a collection using a property.
+        /// It returns a collection of Product objects
+        /// </summary>
+        public List<Product> DistinctByQuery()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list;
+
+            // Write Query Syntax Here
+            list = (from prod in products
+                    select prod)
+                .DistinctBy(prod => prod.Color)
+                .OrderBy(p => p.Color).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region DistinctByMethod
+        /// <summary>
+        /// The DistinctBy() operator finds all unique values within a collection using a property.
+        /// It returns a collection of Product objects
+        /// </summary>
+        public List<Product> DistinctByMethod()
+        {
+            List<Product> products = GetProducts();
+            List<Product> list;
+
+            // Write Method Syntax Here
+            list = products.DistinctBy(prod => prod.Color, default)
+                .OrderBy(p => p.Color).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region ChunkQuery
+        /// <summary>
+        /// Chunk() splits the elements of a larger list into a collection of arrays of a specified size where each element of the collection is an array of those items.
+        /// </summary>
+        public List<Product[]> ChunkQuery()
+        {
+            List<Product> products = GetProducts();
+            List<Product[]> list;
+
+            // Write Query Syntax Here
+            list = (from prod in products
+                select prod).Chunk(5).ToList();
+
+            return list;
+        }
+        #endregion
+
+        #region ChunkMethod
+        /// <summary>
+        /// Chunk() splits the elements of a larger list into a collection of arrays of a specified size where each element of the collection is an array of those items.
+        /// </summary>
+        public List<Product[]> ChunkMethod()
+        {
+            List<Product> products = GetProducts();
+            List<Product[]> list;
+
+            // Write Method Syntax Here
+            list = products.Chunk(5).ToList();
+
+            return list;
+        }
+        #endregion
+        #endregion
+
+        #region Contains
+        #region AllQuery
+        /// <summary>
+        /// Use All() to see if all items in a collection meet a specified condition
+        /// </summary>
+        public bool AllQuery()
+        {
+            List<Product> products = GetProducts();
+            bool value = false;
+
+            // Write Query Syntax Here
+            value = (from prod in products select prod).All(p => p.ListPrice > p.StandardCost);
+
+
+            return value;
+        }
+        #endregion
+
+        #region AllMethod
+        /// <summary>
+        /// Use All() to see if all items in a collection meet a specified condition
+        /// </summary>
+        public bool AllMethod()
+        {
+            List<Product> products = GetProducts();
+            bool value = false;
+
+            // Write Method Syntax Here
+            value = products.All(p => p.ListPrice > p.StandardCost);
+
+
+            return value;
+        }
+        #endregion
+
+        #region AllSalesQuery
+        /// <summary>
+        /// Use All() to see if all items in a collection meet a specified condition
+        /// </summary>
+        public bool AllSalesQuery()
+        {
+            List<SalesOrder> sales = GetSales();
+            bool value = false;
+
+            // Write Query Syntax Here
+            value = (from s in sales select s).All( sale => sale.OrderQty >= 1);
+
+
+            return value;
+        }
+        #endregion
+
+        #region AllSalesMethod
+        /// <summary>
+        /// Use All() to see if all items in a collection meet a specified condition
+        /// </summary>
+        public bool AllSalesMethod()
+        {
+            List<SalesOrder> sales = GetSales();
+            bool value = false;
+
+            // Write Method Syntax Here
+            value = sales.All(s => s.OrderQty >= 1);
+
+
+            return value;
+        }
+        #endregion
+
+        #region AnyQuery
+        /// <summary>
+        /// Use Any() to see if at least one item in a collection meets a specified condition
+        /// </summary>
+        public bool AnyQuery()
+        {
+            List<SalesOrder> sales = GetSales();
+            bool value = false;
+
+            // Write Query Syntax Here
+            value = (from s in sales select s).Any( s => s.OrderQty >= 1);
+
+
+            return value;
+        }
+        #endregion
+
+        #region AnyMethod
+        /// <summary>
+        /// Use Any() to see if at least one item in a collection meets a specified condition
+        /// </summary>
+        public bool AnyMethod()
+        {
+            List<SalesOrder> sales = GetSales();
+            bool value = false;
+
+            // Write Method Syntax Here
+            value = sales.Any( s => s.OrderQty >= 1);
+
+
+            return value;
+        }
+        #endregion
+
+        #region ContainsQuery
+        /// <summary>
+        /// Use the Contains() operator to see if a collection contains a specific value
+        /// </summary>
+        public bool ContainsQuery()
+        {
+            List<int> numbers = new() {1, 2, 3, 4, 5};
+            bool value = false;
+
+            // Write Query Syntax Here
+            value = (from num in numbers select num).Contains(3);
+
+
+            return value;
+        }
+        #endregion
+
+        #region ContainsMethod
+        /// <summary>
+        /// Use the Contains() operator to see if a collection contains a specific value
+        /// </summary>
+        public bool ContainsMethod()
+        {
+            List<int> numbers = new() {1, 2, 3, 4, 5};
+            bool value = false;
+
+            // Write Method Syntax Here
+            value = numbers.Contains(3);
+
+
+            return value;
+        }
+        #endregion
+
+        #region ContainsComparerQuery
+        /// <summary>
+        /// Use the Contains() operator to see if a collection contains a specific value
+        /// </summary>
+        public bool ContainsComparerQuery()
+        {
+            List<Product> products = GetProducts();
+            ProductIdComparer pc = new();
+            bool value = false;
+
+            // Write Query Syntax Here
+
+
+            return value;
+        }
+        #endregion
+
+        #region ContainsComparerMethod
+        /// <summary>
+        /// Use the Contains() operator to see if a collection contains a specific value.
+        /// When comparing classes, you need to write a EqualityComparer class.
+        /// </summary>
+        public bool ContainsComparerMethod()
+        {
+            List<Product> products = GetProducts();
+            ProductIdComparer pc = new();
+            bool value = false;
 
             // Write Method Syntax Here
 
