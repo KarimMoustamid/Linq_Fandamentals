@@ -49,5 +49,5 @@ SamplesViewModel vm = new();
 // vm.Display(products);
 
 
-var result = vm.ContainsQuery();
+var result = vm.IntersectIntegersQuery();
 vm.Display(result);
